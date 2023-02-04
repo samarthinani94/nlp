@@ -1,0 +1,61 @@
+1. Rules and Heuristic based NLP
+
+    Rules are important to plug gaps in a system
+
+    a. Wordnet -  database of words and the semantic relationships between them - synonyms, hyponyms, and meronyms
+    b. Open Mind Common Sense
+    c. Regex - Regular Expressions -
+        i. StanfordCoreNLP for TokensRegex
+    d. CFG - Context free grammar
+
+
+2. ML based NLP
+
+    Three basic steps-
+        i. extracting features from text
+        ii. use feature repr to learn a model
+        iii. eval and improve the model
+
+    Naive Bayes
+        Assumes each feature is independent of all the other features
+        NB is simple to understand and very fast to train and run
+
+    SVM
+        Both Linear and Non Linear separation boundaries
+        This makes SVM robust to variation and noise
+        But SVMs take longer to train and aren't scalable as the data increases
+
+    HMM - Hidden Markov Model
+        Statistical model
+        Assumes there is ab underlying unobservable process with hidden states that generates the data
+        HMM tries to model the hidden state from the data. For eg. POS tagging - underlying process being "grammar"
+        HMM makes an assumption that each hidden state is dependent on the previous hidden state, meaning it's
+            sequential in nature
+
+    CRF - Conditional Random Fields
+        Better than HMM for POS tagging (tasks that rely on sequential nature of the language)
+        CRF performs classification on each element of the sequence
+
+
+3. DL based NLP
+    RNN : forgets things if the sentences are too long
+    LSTM : Solved this^ problem by remembering only the relevant stuff
+    Autoencoders
+    CNNs
+    Transformers : Better than both RNN and LSTM, use transfer learning
+
+    Cons of DL:
+        a. Overfitting
+        b. Very often the models available for transfer learning are not trained on use-case/domain specific dataset
+        c. Training cost
+        d. Hardware constraints for on-device deployment as the models can be large(GB)
+
+
+
+
+
+
+
+
+
+
